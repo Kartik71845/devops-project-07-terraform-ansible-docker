@@ -2,10 +2,13 @@
 .terraform/
 *.tfstate
 *.tfstate.backup
+Terraform/.terraform.lock.hcl
 
 # SSH keys
 *.pem
 *.key
+devops_key.pub
+
 
 # Ansible retry files
 *.retry
