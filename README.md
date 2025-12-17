@@ -8,6 +8,8 @@ This project demonstrates a simple but real-world DevOps workflow where:
 - Docker is used to run an Nginx web server
 - The same configuration is applied consistently across multiple EC2 instances
 
+![alt text](<Untitled (9).gif>)
+
 The focus of this project is **automation, consistency, and clarity**, suitable for a DevOps fresher.
 
 ---
@@ -43,12 +45,6 @@ The focus of this project is **automation, consistency, and clarity**, suitable 
 │ ├── playbook.yml
 │ ├── inventory.ini
 │ └── ansible.cfg
-│
-├── screenshots/
-│ ├── ansible-playbook-run.png
-│ ├── aws-ec2-instances.png
-│ └── nginx-page.png
-│
 └── README.md
 
 yaml
