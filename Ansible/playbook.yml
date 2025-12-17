@@ -1,0 +1,28 @@
+- name: Configure EC2 servers with Docker and Nginx
+  hosts: web
+  become: true
+
+  tasks: 
+    - name: Install Docker
+      apt: 
+        name: docker.io
+        state: present 
+        update_cache: yes
+    - name: Start and enable Docker service
+      service:
+        name: docker
+        state: started
+        enabled: yes
+    - name: Add ubuntu user to Docker group
+      user:
+        name: ubuntu
+        groups: docker
+        append: yes
+    - name: Run nginx container
+      docker_container: 
+        name: nginx
+        image: nginx:1.25
+        state: started
+        restart_policy: always
+        ports:
+          - "80:80"
